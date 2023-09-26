@@ -25,7 +25,7 @@ auth = HTTPBasicAuth()
 
 # The password should be hashed in production applications
 users = {
-    "jcwil": generate_password_hash("Outback511")  # replace with your desired username and password
+    "": generate_password_hash("")  # replace with your desired username and password
 }
 
 @auth.verify_password

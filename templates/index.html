@@ -1,3 +1,4 @@
+
 <!-- This is the correct index.html file! -->
 
 <!DOCTYPE html>
@@ -38,6 +39,7 @@
         </style>
     </head>
     <body>
+        <center>
         <h1>Live Feed</h1>
         <div id="videoContainer" class="video-container">
             <img id="videoFeed" src="{{ url_for('video_feed') }}" alt="Video feed not available">
@@ -87,5 +89,6 @@
                 }
             });
         </script>
+        </center>
     </body>
 </html>
