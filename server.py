@@ -3,11 +3,11 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from camera import generate_frames  # <- Don't forget this import
 
 app = Flask(__name__)
-app.secret_key = "Out_back_511"  # You should use a more secure secret key
+app.secret_key = "user_test"  # You should use a more secure secret key
 
 # The dictionary for storing usernames and passwords
 users = {
-    "jwilson5": generate_password_hash("YOutback511"),  # Replace YOUR_PASSWORD_HERE with your desired password
+    "user_test": generate_password_hash("password_test"),  # Replace YOUR_PASSWORD_HERE with your desired password
 }
 
 # Handling login logic
