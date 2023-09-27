@@ -46,8 +46,10 @@ def index():
 # The prints page
 @app.route('/prints')
 def prints():
+    '''
     if 'username' not in session:
         return redirect(url_for('login'))
+    '''
     return render_template('prints.html')
 
 # Video feed route
