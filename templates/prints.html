@@ -11,72 +11,97 @@
     <p>I first got into 3D printing my freshmen year at Stevens. There were two design classes, and I always volunteered to oversee the designing and 3D modeling for our project. Eventually, I grew a passion for it and ended up buying my own printer and designing my own creations</p>
     <p>This page highlights some of my prints, their design parameters, and other in progrss design. </p>
     <HR><BR>
-    
-      <center>
-      <table>
-        <TR> 
-            <TH> Funko Shelf</TH>
-        </TR>
-    
-        <TR>
-            <TD>This a shelf I designed to hold my Funko Pop collection. It is designed to be mounted on a wall, and has a small lip to prevent the pops from falling off.</TD>
-            
-        </TR>
-    
-        </table>
-
-        <table>
-          <TR> 
-              <TH>Webcam Mount</TH>
-          </TR>
-      
-          <TR>
-              <TD>This is a mount I designed to hold the webcam I use to monitor my 3D printer. It is designed to be snapped into the side grooves of the printer</TD>
-          </TR>
-      
-        </table>
-
-        <table>
-          <TR> 
-              <TH>Weather Bowl</TH>
-          </TR>
-      
-          <TR>
-              <TD>A product of my Design 1 Engineering class, the Weathe Bowl designed to determine the time of day that has the most ideal conditions for an outdoor run. To do this, I designed and 3D-printed an enclosed sensor network that would measure temperature, relative humidity, and light and placed it outdoors on campus. Each day, the sensor network collected data every thirty minutes and wirelessly published it to the Stevens MQTT server, allowing us to analyze how conditions were changing throughout the day.
-              </TD>
-          </TR>
-          <TR>
-            <TD>
-              <img src="{{ url_for('static', filename='WB.BottomHalfPNG.png') }}" width="500" height="400">
-
-              <img src="{{ url_for('static', filename='WB.FinalPic2.JPG') }}" width="325" height="600">
-
-              <img src="{{ url_for('static', filename='WB.TopHalfPNG.png') }}" width="500" height="400">
-          </TR>
-        </table>
-
-        <table>
-          <TR> 
-              <TH>Card Holder</TH>
-          </TR>
-      
-          <TR>
-              <TD>A simple box to hold unused giftcard, and a collection of previous hotel keys</TD>
-          </TR>
-
-          <TR>
-            <TD>
-              <img src="{{ url_for('static', filename='CardBoxFinal.jpg') }}" width="325" height="300">
-
-              <img src="{{ url_for('static', filename='CardRender.png') }}" width="325" height="300">
-
-
-            </TD>
-
-          </TR>
-
-        </table>
-        </center>
-
   </body>
+    
+  <head>
+    <meta charset="UTF-8">
+    <title>Centered Tables</title>
+    <style>
+        /* Center all content */
+        body {
+            text-align: center;
+        }
+
+        /* Style for each table */
+        table {
+            width: 100%; /* Full width of the parent container */
+            margin-bottom: 20px; /* Space between tables */
+            border-collapse: collapse;
+        }
+
+        /* Center table header and table data */
+        th, td {
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Style for table header */
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Style for the image container */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Style for the images */
+        img {
+            margin: 10px; /* Space around images */
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Funko Shelf</th>
+        </tr>
+        <tr>
+            <td>This a shelf I designed to hold my Funko Pop collection. It is designed to be mounted on a wall, and has a small lip to prevent the pops from falling off.</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Webcam Mount</th>
+        </tr>
+        <tr>
+            <td>This is a mount I designed to hold the webcam I use to monitor my 3D printer. It is designed to be snapped into the side grooves of the printer</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Weather Bowl</th>
+        </tr>
+        <tr>
+            <td>A product of my Design 1 Engineering class, the Weather Bowl is designed to determine the time of day that has the most ideal conditions for an outdoor run. To do this, I designed and 3D-printed an enclosed sensor network that would measure temperature, relative humidity, and light and placed it outdoors on campus. Each day, the sensor network collected data every thirty minutes and wirelessly published it to the Stevens MQTT server, allowing us to analyze how conditions were changing throughout the day.</td>
+        </tr>
+        <tr>
+            <td class="image-container">
+                <img src="{{ url_for('static', filename='WB.BottomHalfPNG.png') }}" width="500" height="400">
+                <img src="{{ url_for('static', filename='WB.FinalPic2.JPG') }}" width="325" height="600">
+                <img src="{{ url_for('static', filename='WB.TopHalfPNG.png') }}" width="500" height="400">
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Card Holder</th>
+        </tr>
+        <tr>
+            <td>A simple box to hold unused gift cards, and a collection of previous hotel keys</td>
+        </tr>
+        <tr>
+            <td class="image-container">
+                <img src="{{ url_for('static', filename='CardBoxFinal.jpg') }}" width="325" height="300">
+                <img src="{{ url_for('static', filename='CardRender.png') }}" width="325" height="300">
+            </td>
+        </tr>
+    </table>
+</body>
 </html>
