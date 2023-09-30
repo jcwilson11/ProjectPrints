@@ -1,13 +1,12 @@
 from flask import Flask, render_template, Response, request, redirect, url_for, session
 from werkzeug.security import check_password_hash, generate_password_hash
-from camera import generate_frames  # <- Don't forget this import
-
+from camera import generate_frames  # Import the camera script
 app = Flask(__name__, static_url_path='/static')
-app.secret_key = "user_test"  # You should use a more secure secret key
+app.secret_key = "user_test"  
 
 # The dictionary for storing usernames and passwords
 users = {
-    "user_test": generate_password_hash("password_test"),  # Replace YOUR_PASSWORD_HERE with your desired password
+    "user_test": generate_password_hash("password_test"),  
 }
 
 # Handling login logic
