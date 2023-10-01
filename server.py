@@ -25,12 +25,10 @@ def login():
     else:
         return render_template('login.html')
 
-# The previous homepage (login page)
 @app.route('/login_home')
 def login_home():
     return render_template('login.html')
 
-# The new homepage
 @app.route('/')
 def main_home():
     return render_template('home.html')
