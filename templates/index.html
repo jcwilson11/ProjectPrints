@@ -39,6 +39,7 @@
         </style>
     </head>
     <body>
+        
         <center>
         <h1>Live Feed</h1>
         <div id="videoContainer" class="video-container">
@@ -50,6 +51,9 @@
         <button id="screenshotBtn">Take Screenshot</button>
         <button id="zoomInBtn">Zoom In</button>
         <button id="zoomOutBtn">Zoom Out</button>
+
+        <canvas id="screenshotCanvas" style="display: none;"></canvas>
+
         <script> 
             document.getElementById('fullscreenBtn').addEventListener('click', function() {
                 var elem = document.documentElement;
@@ -75,23 +79,27 @@
               document.msExitFullscreen(); // IE/Edge
             }
         });
+        
+            document.addEventListener('DOMContentLoaded', (event) => {
+                let screenshotButton = document.getElementById('screenshotBtn');
+                screenshotButton.addEventListener('click', function() {
+                    console.log("Button was clicked!");
 
-        document.getElementById('screenshotBtn').addEventListener('click', function() {
-                console.log("Button was clicked!");
-                var video = document.getElementById('videoFeed');
-                var canvas = document.getElementById('screenshotCanvas');
-                var context = canvas.getContext('2d');
+                    var video = document.getElementById('videoFeed');
+                    var canvas = document.getElementById('screenshotCanvas');
+                    var context = canvas.getContext('2d');
 
-                // Set canvas dimensions to video dimensions
-                canvas.width = video.width;
-                canvas.height = video.height;
+                    // Set canvas dimensions to video dimensions
+                    canvas.width = video.width;
+                    canvas.height = video.height;
 
-                // Draw the current frame of the video onto the canvas
-                context.drawImage(video, 0, 0, video.width, video.height);
+                    // Draw the current frame of the video onto the canvas
+                    context.drawImage(video, 0, 0, video.width, video.height);
 
-                // Get the image data from the canvas and open it in a new window/tab
-                var imgData = canvas.toDataURL();
-                window.open(imgData);
+                    // Get the image data from the canvas and open it in a new window/tab
+                    var imgData = canvas.toDataURL();
+                    window.open(imgData);
+                });
             });
 
         var zoomLevel = 1;
