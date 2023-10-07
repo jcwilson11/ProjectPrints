@@ -89,9 +89,9 @@
                     var canvas = document.getElementById('screenshotCanvas');
                     var context = canvas.getContext('2d');
 
-                    // Set canvas dimensions to video dimensions
-                    canvas.width = video.width;
-                    canvas.height = video.height;
+                    // Dynamically set canvas dimensions to video dimensions
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
 
                     // Draw the current frame of the video onto the canvas
                     context.drawImage(video, 0, 0, video.width, video.height);
