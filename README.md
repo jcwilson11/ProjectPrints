@@ -1,9 +1,28 @@
-# ProjectPrints
-New Repo for my first coding project
+# **Project Prints**
 
-## Project Description
-The purpose of this project is the using a raspberry pi and usb camera to display and monitor my 3d printer when away from home in order to ensure that everything is running smoothly. The project is still in the early stages of development and is not yet ready for use. The primary language is going to python 3.10.
-If possible, I would like to be able to use the raspberry pi to look for specific conditions and then send a text message to my phone if something is wrong. I would also like to be able to use the raspberry pi to control the printer remotely, but that is a secondary goal.
+## **Repository Overview**
+This repository is dedicated to "Project Prints," a personal venture to create a remote monitoring system for a 3D printer using a Raspberry Pi and USB camera.
+
+---
+
+## **Project Description**
+Aiming to monitor and control a 3D printer remotely, this project is in the early development stages. The core technology involves a Raspberry Pi and a USB camera, with Python 3.10 as the primary programming language. Current objectives include setting up the Raspberry Pi to detect specific conditions and send alerts via text message, and potentially controlling the printer remotely.
+
+### **Development Tools and Commands**
+- SSH, system updates, camera checks, and network configurations on Raspberry Pi.
+- Python development, including running and editing server files.
+- VNC server management for remote access.
+
+---
+
+## **Project Goals**
+- **Primary Goal**: Implement a system to monitor the 3D printer using a Raspberry Pi and USB camera.
+- **Secondary Goal**: Develop features for remote control of the printer and automated alerts.
+
+---
+
+*For more information or to contribute to this project, please feel free to reach out through this repository.*
+
 
 ## Helpful Commands
 - `ssh -X jcwil@raspberrypi` - ssh into the raspberry pi
