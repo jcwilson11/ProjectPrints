@@ -21,7 +21,7 @@ Aiming to monitor and control a 3D printer remotely, this project is in the earl
 
 ---
 
-*For more information or to contribute to this project, please feel free to reach out through this repository.*
+*For more information or to contribute to this project, please feel free to contact me at [jcwilson2021@outlook.com](mailto:jcwilson2021@outlook.com) or via [LinkedIn](https://www.linkedin.com/in/joriswilson11/)**
 
 
 ## Helpful Commands
